@@ -1,37 +1,45 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">LifeAdmin</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+﻿@inherits NavMenuBase
+@using Microsoft.AspNetCore.Components
+
+<div class="mat-elevation-z4" style="padding: 10px;">
+    <MatButton OnClick="@(() => navMenu.ToggleAllSubMenus(true))">Expand All</MatButton>
+    <MatButton OnClick="@(() => navMenu.ToggleAllSubMenus(false))">Collapse All</MatButton>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
-    </ul>
-</div>
+@if(NavData == null) 
+{
+    <Loading/>
+} 
+else 
+{
 
-@code {
-    private bool collapseNavMenu = true;
+  <MatCard color="primary">
+            <MatCardContent  color="primary">
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+<MatNavMenu @ref="navMenu" Multi="MultiChecked"  color="primary">
+    @foreach (var section in NavData.Sections.OrderBy(section => section.Weight).ToList())
     {
-        collapseNavMenu = !collapseNavMenu;
+        <MatNavSubMenu  color="primary">
+            <MatNavSubMenuHeader Title=@section.Name>
+                <MatNavItem AllowSelection="false">
+                    <span class="iconify" data-icon=@section.DataIcon data-inline="false"/> 
+                    &nbsp;&nbsp; @section.Name
+                </MatNavItem>
+            </MatNavSubMenuHeader>
+
+            <MatNavSubMenuList>
+                @foreach (var topic in section.Topics.OrderBy(section => section.Weight).ToList())
+                {
+                    <MatNavItem Href=@((string)($"{section.Raw}/{topic.Raw}")) Title=@topic.Name>@topic.Name</MatNavItem>
+                }
+            </MatNavSubMenuList>
+        </MatNavSubMenu>
     }
+
+</MatNavMenu>
+
+            </MatCardContent>
+        </MatCard>
+
 }
+             

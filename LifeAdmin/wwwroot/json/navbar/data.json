@@ -1,0 +1,199 @@
+{
+  "sections": [
+    {
+      "name": "Purpose",
+      "raw": "purpose",
+      "weight": 0,
+      "dataIcon": "ant-design:star-filled",
+      "topics": [
+        {
+          "name": "Mission Statement",
+          "weight": 0
+        },
+        {
+          "name": "Needs to Improve",
+          "weight": 1
+        },
+        {
+          "name": "Goals",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Excerise",
+      "weight": 1,
+      "dataIcon": "ic:outline-sports-kabaddi",
+      "topics": [
+        {
+          "name": "Calories",
+          "weight": 0
+        },
+        {
+          "name": "Muscle",
+          "weight": 1
+        },
+        {
+          "name": "Training Planner",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Work",
+      "weight": 2,
+      "dataIcon": "bi:clock-history",
+      "topics": [
+        {
+          "name": "Tasks",
+          "weight": 0
+        },
+        {
+          "name": "Timer",
+          "weight": 1
+        },
+        {
+          "name": "Jobs",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Food",
+      "weight": 3,
+      "dataIcon": "dashicons:food",
+      "topics": [
+        {
+          "name": "Groceries",
+          "weight": 0
+        },
+        {
+          "name": "Nutrition",
+          "weight": 1
+        },
+        {
+          "name": "Meal Planner",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "weight": 5,
+      "dataIcon": "bi:graph-up",
+      "topics": [
+        {
+          "name": "Revenue",
+          "weight": 0
+        },
+        {
+          "name": "Expenses",
+          "weight": 1
+        },
+        {
+          "name": "Budget",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Data",
+      "raw": "data",
+      "weight": 6,
+      "dataIcon": "bi:clipboard-data",
+      "topics": [
+        {
+          "name": "Analytics",
+          "weight": 2,
+          "raw": "analytics"
+        },
+        {
+          "name": "Import/Export",
+          "weight": 0,
+          "raw": "import-export"
+        },
+        {
+          "name": "Editor",
+          "weight": 1,
+          "raw": "editor"
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "weight": 7,
+      "dataIcon": "cil:education",
+      "topics": [
+        {
+          "name": "Learning",
+          "weight": 0
+        },
+        {
+          "name": "Know",
+          "weight": 1
+        },
+        {
+          "name": "Tutorials",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Relationships",
+      "weight": 8,
+      "dataIcon": "ant-design:heart-filled",
+      "topics": [
+        {
+          "name": "Looking forward to",
+          "weight": 0
+        },
+        {
+          "name": "Current",
+          "weight": 1
+        },
+        {
+          "name": "Date Planner",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "weight": 9,
+      "dataIcon": "map:health",
+      "topics": [
+        {
+          "name": "Sleep",
+          "weight": 0
+        },
+        {
+          "name": "Sickness",
+          "weight": 1
+        },
+        {
+          "name": "Medical",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "name": "Documentation",
+      "weight": 10,
+      "dataIcon": "simple-line-icons:doc",
+      "topics": [
+        {
+          "name": "Website",
+          "weight": 0
+        },
+        {
+          "name": "Data",
+          "weight": 1
+        },
+        {
+          "name": "Development",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

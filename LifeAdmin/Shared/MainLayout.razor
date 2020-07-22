@@ -1,15 +1,22 @@
-﻿@inherits LayoutComponentBase
+﻿@inherits MainLayoutBase
 
+<MatThemeProvider Theme="@laTheme">
+
+@ProfileData.Text
+
+
+<div style="display:grid;grid-template-columns:30% 70%;border:2px solid red;width:100vw;">
 <div class="sidebar">
     <NavMenu />
 </div>
 
 <div class="main">
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-    </div>
-
     <div class="content px-4">
         @Body
     </div>
 </div>
+
+</div>
+
+</MatThemeProvider>
+
