@@ -4,12 +4,24 @@
 
 @ProfileData.Text
 
-
-<div style="display:grid;grid-template-columns:30% 70%;border:2px solid red;width:100vw;">
-<div class="sidebar">
+@if(ApplicationState.IsDarkTheme) {
+<style>
+html {
+    color: white;
+    background-color: black;
+  }
+</style>
+} else {
+<style>
+html {
+    color: black;
+    background-color: white;
+  }
+</style>
+}
+<MatCard>
+<div style="display:grid;grid-template-columns:30% 70%;;width:100vw;">
     <NavMenu />
-</div>
-
 <div class="main">
     <div class="content px-4">
         @Body
@@ -17,6 +29,6 @@
 </div>
 
 </div>
-
+</MatCard>
 </MatThemeProvider>
 

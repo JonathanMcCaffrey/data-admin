@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using LifeAdmin.Data.Profile.Data;
+using LifeAdmin.Data.ApplicationState;
 namespace LifeAdmin
 {
   public class Program
@@ -18,6 +19,7 @@ namespace LifeAdmin
       builder.RootComponents.Add<App>("app");
       builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
       builder.Services.AddSingleton(sp => new ProfileData());
+      builder.Services.AddSingleton(sp => new ApplicationState());
       await builder.Build().RunAsync();
     }
   }

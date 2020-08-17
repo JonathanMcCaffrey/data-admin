@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace LifeAdmin.Shared
 {
 
-  public class NavMenuBase : ComponentBase
+  public partial class NavMenu : ComponentBase
   {
 
     protected bool MultiChecked { get; set; }

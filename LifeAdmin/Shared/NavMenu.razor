@@ -1,10 +1,15 @@
-﻿@inherits NavMenuBase
-@using Microsoft.AspNetCore.Components
+﻿@using Microsoft.AspNetCore.Components
 
-<div class="mat-elevation-z4" style="padding: 10px;">
-    <MatButton OnClick="@(() => navMenu.ToggleAllSubMenus(true))">Expand All</MatButton>
-    <MatButton OnClick="@(() => navMenu.ToggleAllSubMenus(false))">Collapse All</MatButton>
-</div>
+<MatCard>
+
+    <MatButton Raised="true" OnClick="@(() => navMenu.ToggleAllSubMenus(true))">Expand All</MatButton>
+    <MatButton Raised="true" OnClick="@(() => navMenu.ToggleAllSubMenus(false))">Collapse All</MatButton>
+
+
+<LifeAdmin.Shared.ThemeToggle />
+
+
+
 
 @if(NavData == null) 
 {
@@ -42,4 +47,5 @@ else
         </MatCard>
 
 }
-             
+
+</MatCard>

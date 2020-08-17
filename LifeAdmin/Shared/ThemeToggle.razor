@@ -1,0 +1,15 @@
+
+
+<div class="mat-elevation-z4" style="padding: 10px;">
+    
+  @if(ApplicationState.IsDarkTheme) 
+  {
+    <MatButton Raised="true" OnClick="@OnToggleTheme">
+         <span class="iconify" data-icon="bi:sun" data-inline="false"/> 
+    </MatButton>
+  } else {
+  <MatButton Raised="true" OnClick="@OnToggleTheme">
+         <span class="iconify" data-icon="bi:moon" data-inline="false"/> 
+    </MatButton>
+  }
+</div>
