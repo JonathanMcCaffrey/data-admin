@@ -21,6 +21,10 @@ namespace LifeAdmin.Shared
 
     protected NavData NavData { get; set; }
 
+
+    
+
+
     protected override async Task OnInitializedAsync()
     {
       NavData = await Http.GetJsonAsync<NavData>("json/navbar/data.json");
