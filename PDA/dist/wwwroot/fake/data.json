@@ -1,0 +1,27 @@
+{
+  "Food": {
+    "Grocery": {
+      "GroceryItems": [
+        {
+          "Price": 2.99000001,
+          "Quantity": 1.5,
+          "Store": "example_store",
+          "Calories": 1,
+          "GroceryId": "example_id"
+        }
+      ]
+    },
+    "MealPlanner": {
+      "MealItems": [
+        {
+          "Day": 1,
+          "GroceryId": "grocery_id"
+        }
+      ]
+    },
+    "Nutrition": {
+      "Fat": 5,
+      "Calories": 10
+    }
+  }
+}

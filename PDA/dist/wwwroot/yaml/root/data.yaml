@@ -1,0 +1,23 @@
+example: See, this works
+
+
+sections:
+  - name: Food
+    dataIcon: dashicons:food
+    weight: 3
+    topics:
+      - name: Groceries
+      - name: Nutrition
+      - name: Meal Planner
+  - name: Education
+    dataIcon: cil:education
+    weight: 11
+    topics: 
+      - name: Books
+        items:
+          - type: string
+            value: C# Text Book
+          - type: string
+            value: C# Text Book 2
+          - type: string
+            value: C# Text Book 3
