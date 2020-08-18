@@ -1,19 +1,13 @@
-﻿
-using System;
-using System.Net.Http;
-using Microsoft.AspNetCore.Components;
-using PDA.Data.UI.Nav;
+﻿using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
 using PDA.Data.Profile.Data;
 using System.Text.Json;
-using System.IO;
-using System.Reflection;
 using Microsoft.JSInterop;
 using BlazorInputFile;
 
 namespace PDA.Pages.Data
 {
-  public class EditorBase : ComponentBase
+  public partial class Editor : ComponentBase
   {
 
     [Inject]

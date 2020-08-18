@@ -1,6 +1,5 @@
 ﻿@page "/data/editor"
 @using PDA.Data.Profile.Data
-@inherits EditorBase
 @using BlazorInputFile
 
 <a href=@((string)($"filename:profileData.json;data:application/json;charset=utf-8,{JSONString}") ) download>Export</a>
@@ -25,12 +24,12 @@
     @UploadedProfileData
 </pre>
 
-@if(ProfileData == null) 
+@if (ProfileData == null)
 {
-    <Loading/>
+    <Loading />
 }
 else
- {
+{
 
 }
 
